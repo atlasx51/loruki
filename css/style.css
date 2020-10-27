@@ -34,7 +34,7 @@ h1, h2 {
     margin: 10px 0;
 }
 
-p{
+p {
     margin: 10px 0;
 }
 
@@ -42,11 +42,18 @@ img {
     width: 100%;
 }
 
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
 /* navbar */
 .navbar{
     background-color: var(--primary-color);
     color: #fff;
     height: 70px;
+   
+  
 }
  
 .navbar ul {
@@ -57,6 +64,7 @@ img {
     color: #fff;
     padding: 10px;
     margin: 0 5px;
+    
 }
 
 .navbar a:hover{
@@ -85,8 +93,40 @@ img {
 }
 
 .showcase .grid {
-    grid-template-columns: 55% 45%;
+    overflow: visible;
+    grid-template-columns: 55% auto;
     gap: 30px;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus{
+    outline: none;
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
 }
 
 /* utilities */
@@ -97,6 +137,18 @@ img {
     padding: 0 40px;
 
 }
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
 
 .flex {
     display: flex;
