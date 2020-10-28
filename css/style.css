@@ -121,6 +121,21 @@ img {
     font-size: 16px;
 }
 
+.showcase::before,
+.showcase::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background:#fff;
+    transform: skewY(-3deg);
+    -webkit-tratransform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
 .showcase-form input:focus{
     outline: none;
 }
@@ -129,6 +144,10 @@ img {
     animation: slideInFromLeft 1s ease-in;
 }
 
+/* stats */
+.stats {
+    padding-top: 100px;
+}
 /* utilities */
 .container {
     max-width: 1100px;
@@ -148,8 +167,25 @@ img {
 }
 
 
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 
+}
 
+.btn-outline{
+    background-color: transparent;
+    border: 1px #fff solid;
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
 .flex {
     display: flex;
     justify-content: center;
@@ -167,4 +203,6 @@ img {
     height: 100%;
 
 }
+
+
 
