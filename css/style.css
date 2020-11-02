@@ -76,32 +76,33 @@ img {
 .navbar .flex {
     justify-content: space-between;
 }
-
-/* showcase */
-.showcase{
+/* Showcase */
+.showcase {
     height: 400px;
-    background-color: var(--primary-color) ;
+    background-color: var(--primary-color);
     color: #fff;
     position: relative;
-
-}
-
-.showcase h1 {
+  }
+  
+  .showcase h1 {
     font-size: 40px;
-
-}
-
-.showcase p {
+  }
+  
+  .showcase p {
     margin: 20px 0;
-}
-
-.showcase .grid {
+  }
+  
+  .showcase .grid {
     overflow: visible;
     grid-template-columns: 55% auto;
     gap: 30px;
-}
-
-.showcase-form{
+  }
+  
+  .showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+  }
+  
+  .showcase-form {
     position: relative;
     top: 60px;
     height: 350px;
@@ -109,44 +110,41 @@ img {
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
-}
-
-.showcase-form .form-control{
+    animation: slideInFromRight 1s ease-in;
+  }
+  
+  .showcase-form .form-control {
     margin: 30px 0;
-}
-
-.showcase-form input[type='text'],
-.showcase-form input[type='email']{
+  }
+  
+  .showcase-form input[type='text'],
+  .showcase-form input[type='email'] {
     border: 0;
     border-bottom: 1px solid #b4becb;
     width: 100%;
     padding: 3px;
     font-size: 16px;
-}
-
-.showcase::before,
-.showcase::after{
+  }
+  
+  .showcase-form input:focus {
+    outline: none;
+  }
+  
+  .showcase::before,
+  .showcase::after {
     content: '';
     position: absolute;
     height: 100px;
     bottom: -70px;
     right: 0;
     left: 0;
-    background:#fff;
+    background: #fff;
     transform: skewY(-3deg);
-    -webkit-tratransform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
     -ms-transform: skewY(-3deg);
-}
-
-.showcase-form input:focus{
-    outline: none;
-}
-
-.showcase-text {
-    animation: slideInFromLeft 1s ease-in;
-}
-
+  }
+  
 /* stats */
 .stats {
     padding-top: 100px;
@@ -185,3 +183,25 @@ font-size: 35px;
 .cloud .grid {
     grid-template-columns: 4fr 3fr;
 }
+
+/* languages */
+.languages .flex{
+    flex-wrap: wrap;
+}
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+
+
